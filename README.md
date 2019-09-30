@@ -11,3 +11,8 @@ flutter run
 
 ```
 注意：VS Code要先配置好flutter环境，安装flutter插件，创建好模拟器
+
+# flutter学习参考链接
+https://flutterchina.club/get-started/install/
+https://book.flutterchina.club/
+https://juejin.im/book/5c5423ef6fb9a049cd54a213
