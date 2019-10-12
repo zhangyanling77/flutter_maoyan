@@ -43,7 +43,7 @@ class MyHomePage extends StatelessWidget {
                 // 头像区域
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(
-                      'https://upload.jianshu.io/users/upload_avatars/12442310/e11b2581-d89e-406e-95bc-5e1421066549.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240'),
+                      'https://mirror-gold-cdn.xitu.io/168e08be61400b23518?imageView2/1/w/180/h/180/q/85/format/webp/interlace/1'),
                 ),
                 // 装饰器
                 decoration: BoxDecoration(
