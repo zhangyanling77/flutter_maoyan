@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
 // 引入无缝滚动组件 MovieScroll
 import 'MovieScroll.dart';
 
@@ -8,7 +7,7 @@ class HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ListView 可以排列，不考虑溢出的
-    // Column 是在一个盒子里上下放物品, 要考虑溢出
+    // Column 是在一个盒子里上下放, 要考虑溢出
     return ListView(
       children: <Widget>[
         HomeBodyArea(title: '最新电影'),
@@ -20,7 +19,6 @@ class HomeBody extends StatelessWidget {
   }
 }
 
-// 我们的页面有4个区块，所以拆分出来
 class HomeBodyArea extends StatelessWidget {
   HomeBodyArea({Key key, @required this.title}):super(key: key);
   final String title;
@@ -52,7 +50,6 @@ class HomeBodyArea extends StatelessWidget {
               ],
             ),
           ),
-
           // 电影无缝滚动区域
           MovieScroll()
         ],
