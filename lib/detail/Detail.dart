@@ -3,10 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
-// 引入假数据
 import '../data/CustomData.dart';
-
-// 请求数据
 import 'package:dio/dio.dart';
 import 'dart:convert';
 
@@ -24,7 +21,6 @@ class Detail extends StatefulWidget {
 }
 
 class _DetailState extends State<Detail> {
-  // 引入假数据
   final Map detailMap = new CustomData().detailMap;
 
   // 获取的数据
