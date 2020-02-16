@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-// 引入假数据
-// import '../data/CustomData.dart';
-
 // 引入dio插件，然后进行数据请求
 import 'package:dio/dio.dart';
 // 数据解析
 import 'dart:convert';
-
 // 引入详情页
 import '../detail/Detail.dart';
 
