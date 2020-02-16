@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-// 引入假数据
 import '../data/CustomData.dart';
 
 class MovieScroll extends StatelessWidget {
-  // 定义数组数据
   // 在 flutter中, 一切皆组件，每一个组件都是一个类
   // 类的调用需要用new关键词，但是new 也可以省略
   final List scrolllist = CustomData().scrolllist;
