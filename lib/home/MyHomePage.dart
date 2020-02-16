@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-// 引入三个页面
 import 'HomeBody.dart';
 import '../movie/MovieList.dart';
 import '../cinema/CinemaList.dart';
@@ -10,7 +9,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    // 控制器，导航和页面的联动效果需要一个控制器去控制，这个组件直接帮助我们添加好了
+    // 控制器，导航和页面的联动效果需要一个控制器去控制
     return DefaultTabController(
       // 控制器控制页面切换的数量，页面和导航的数量要一致
       length: 3,
@@ -30,7 +29,7 @@ class MyHomePage extends StatelessWidget {
 
         // 侧边栏
         drawer: Drawer(
-          // ListView是从上到下排列的盒子容器，当然也能都从左网友列
+          // ListView是从上到下排列的盒子容器，当然也能都从左往右列
           child: ListView(
             // 去掉顶部的padding间距
             padding: EdgeInsets.all(0),
@@ -39,7 +38,7 @@ class MyHomePage extends StatelessWidget {
               // 侧边栏头部
               UserAccountsDrawerHeader(
                 accountName: Text('一江西流'),
-                accountEmail: Text('18783226594@163.com'),
+                accountEmail: Text('2399262539@qq.com'),
                 // 头像区域
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(
