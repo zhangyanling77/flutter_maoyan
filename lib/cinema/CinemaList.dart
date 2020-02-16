@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-// 引入dio库 引入convert做数据解析
 import 'package:dio/dio.dart';
 import 'dart:convert';
 
@@ -12,40 +11,6 @@ class CinemaList extends StatefulWidget {
 
 // 控制器
 class _CinemaListState extends State<CinemaList> {
-/*
-  List cinemas = [
-    {
-      "id": 9647,
-      "mark": 0,
-      "nm": "沃美影城（回龙观店）",
-      "sellPrice": "39",
-      "addr": "昌平区回龙观同成街华联购物中心四楼（城铁回龙观站出口对面）",
-      "distance": "1.1km",
-      "tag": {
-        "allowRefund": 0,
-        "buyout": 0,
-        "cityCardTag": 0,
-        "deal": 0,
-        "endorse": 0,
-        "hallType": [
-          "杜比全景声厅",
-          "DTS:X 临境音厅",
-          "4K厅",
-        ],
-        "hallTypeVOList": [
-          {"name": "杜比全景声厅", "url": ""}
-        ],
-        "sell": 1,
-        "snack": 1,
-        "vipTag": "折扣卡"
-      },
-      "promotion": {
-        "cardPromotionTag": "开卡特惠，首单2张最高立减4元",
-      },
-    },
-  ];
-*/
-  // 定义当前页面使用的数据
   List cinemas = [];
 
   // 存储当前页面需要的三种颜色
