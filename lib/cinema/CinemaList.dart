@@ -9,23 +9,17 @@ class CinemaList extends StatefulWidget {
   _CinemaListState createState() => _CinemaListState();
 }
 
-// 控制器
 class _CinemaListState extends State<CinemaList> {
   List cinemas = [];
-
-  // 存储当前页面需要的三种颜色
   // 红色
   Color color0 = Color.fromARGB(255, 240, 61, 55);
   // 橙色
   Color color1 = Color.fromARGB(255, 255, 153, 0);
   // 黄绿色
   Color color2 = Color.fromARGB(255, 88, 157, 175);
-
-  // 我们需要一个函数 对tag 进行处理， 然后根据实际值进行渲染
+  // 对tag 进行处理
   List<Widget> tagWidgets(tag) {
-    // tag标签的数组
     List<Widget> tagList = [];
-
     // 退
     if (tag["allowRefund"] == 1) {
       tagList.add(CinemaTag(
@@ -33,7 +27,6 @@ class _CinemaListState extends State<CinemaList> {
         text: '退',
       ));
     }
-
     // 改签
     if (tag["endorse"] == 1) {
       tagList.add(CinemaTag(
@@ -41,7 +34,6 @@ class _CinemaListState extends State<CinemaList> {
         text: '改签',
       ));
     }
-
     // 小吃
     if (tag["snack"] == 1) {
       tagList.add(CinemaTag(
@@ -49,7 +41,6 @@ class _CinemaListState extends State<CinemaList> {
         text: '小吃',
       ));
     }
-
     // 折扣卡
     if (tag["vipTag"] is String && tag["vipTag"].length > 0) {
       tagList.add(CinemaTag(
@@ -57,7 +48,6 @@ class _CinemaListState extends State<CinemaList> {
         text: tag["vipTag"],
       ));
     }
-
     // 影厅部分
     if (tag["hallType"] is List) {
       tag["hallType"].forEach((str) {
@@ -76,7 +66,6 @@ class _CinemaListState extends State<CinemaList> {
     getCinemaList();
     super.initState();
   }
-
   // 获取数据
   void getCinemaList() async {
     try {
@@ -129,7 +118,6 @@ class _CinemaListState extends State<CinemaList> {
                     ],
                   ),
                 ),
-
                 // 第二行 地址和距离
                 Padding(
                   padding: EdgeInsets.only(bottom: 3),
@@ -153,7 +141,6 @@ class _CinemaListState extends State<CinemaList> {
                     ],
                   ),
                 ),
-
                 // 第三行 tag标签
                 Padding(
                   padding: EdgeInsets.only(bottom: 5),
@@ -161,7 +148,6 @@ class _CinemaListState extends State<CinemaList> {
                     children: tagWidgets(_cinema["tag"]),
                   ),
                 ),
-
                 // 第四行 一个icon 和优惠信息
                 _cinema["promotion"]["cardPromotionTag"] is String
                     ? Row(
@@ -176,7 +162,6 @@ class _CinemaListState extends State<CinemaList> {
                               image: AssetImage('images/card.png'),
                             ),
                           ),
-
                           // 优惠信息
                           Text(
                             '${_cinema["promotion"]["cardPromotionTag"]}',
